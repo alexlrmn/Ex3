@@ -9,7 +9,7 @@ output: rmarkdown::github_document
 
 # Question 1
 
-## Package and code used:
+## Preperations:
 ```{r}
 install.packages('igraph')
 library(igraph)
@@ -17,6 +17,8 @@ library(igraph)
 #Loading the data
 connections.data <- read.csv('ga_edgelist.csv', header = T)
 graph_connections <- graph.data.frame(connections.data,directed = F)
+
+#Feel the data
 graph_connections
 ```
 ![Caption for the graph_connections.](/images/graph_connections.JPG)
@@ -28,10 +30,9 @@ plot(graph_connections)
 
 ![Caption for the grapth_plot.](/images/graph_plot.JPG)
 
+## a.
 
-
-
-## Betweeness 
+### i. Betweeness 
 
 This chunk consists the results for Betweeness
 
@@ -44,7 +45,11 @@ max_bet
 ind_max_bet
 ```
 
-##  Closeness
+> Sloan is the actor with the highest betweeness (115.3667)
+![Caption for the highest betweeness.](/images/sloan_betweeness.JPG)
+
+
+### ii. Closeness
 
 This chunk consists the results for Closeness
 
@@ -57,7 +62,10 @@ max_close
 ind_max_close
 ```
 
-## Eigencetor
+> Torres is the actor with the highest Closeness (0.003194888)
+![Caption for the highest closeness.](/images/torres_closeness.JPG)
+
+### iii. Eigencetor
 
 This chunk consists the results for Eigencetor
 
@@ -70,8 +78,13 @@ max_eigen
 ind_max_eigen
 ```
 
+> Karev is the actor with the highest eigencetor
+![Caption for the highest eigencetor.](/images/karev_eigencetor.JPG)
 
-## Community 1 - Girvan-Newman community detection
+## b.
+
+### First Algorithm: Girvan-Newman
+#### i. Community 1 - Girvan-Newman community detection
 
 This chunk consists the creation of the first community detection algorithm
 
@@ -81,16 +94,20 @@ GrivNewm <-  edge.betweenness.community(graph_connections)
 comGN <- membership(GrivNewm)
 plot(graph_connections, vertex.size=5,vertex.color=comGN, asp=FALSE)
 ```
+![Caption for the Girvan-Newman community detection algorithm.](/images/community1_girvan-newman.JPG)
 
-## Community 1 - Number of communities
+
+#### ii. Community 1 - Number of communities
 
 This chunk consists the number of communities and their size
 
 ```{r}
 table(comGN)
 ```
+> Number of communities detected is 7, size of each community:
+![Caption for the Girvan-Newman community detection algorithm size of each community.](/images/community1_girvan-newman_size.JPG)
 
-## Community 1 - Modularity
+#### iii. Community 1 - Modularity
 
 This chunk consists the Modularity rate
 
@@ -99,8 +116,11 @@ GrivNewm$modularity
 max(GrivNewm$modularity)
 which.max(GrivNewm$modularity)
 ```
+> The highest modularity value achieved is:
+![Caption for the Girvan-Newman community detection algorithm modularity.](/images/community1_girvan-newman_modularity.JPG)
 
-## Community 2 - walktrap community detection
+### Second algorithm: Walktrap
+#### Community 2 - walktrap community detection
 
 This chunk consists the creation of the second community detection algorithm
 
@@ -110,16 +130,19 @@ walktrap <- walktrap.community(graph_connections)
 comWT <- membership(walktrap)
 plot(graph_connections, vertex.size=5,vertex.color=comWT, asp=FALSE)
 ```
+![Caption for the walktrap community detection algorithm.](/images/community1_walktrap.JPG)
 
-## Community 2 - Number of communities
+#### Community 2 - Number of communities
 
 This chunk consists the number of communities and their size
 
 ```{r}
 table(comWT)
 ```
+> Number of communities detected is 7, size of each community:
+![Caption for the walktrap community detection algorithm.](/images/community1_walktrap_size.JPG)
 
-## Community 2 - Modularity
+#### Community 2 - Modularity
 
 This chunk consists the Modularity rate
 
@@ -128,6 +151,11 @@ walktrap$modularity
 max(walktrap$modularity)
 which.max(walktrap$modularity)
 ```
+> The highest modularity value achieved is:
+![Caption for the Girvan-Newman community detection algorithm modularity.](/images/community1_walktrap_modularity.JPG)
+
+
+# Question 2
 
 ## API Football Games + creation the directed graph
 ```{r}
