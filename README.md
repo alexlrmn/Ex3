@@ -193,7 +193,7 @@ graph_football <- graph.data.frame(football.data,directed = T)
 ## b. Nodes and edges:
 > Each node in the graph represent a football club. Each edge represent a game between two teams, the edge is directed, so the node where the edge comes from is the winnig team and the end of the edge points to the losing team. For each node, the in degree represent the number of games lost by the club, and the out degree represent the number of games won. In total, the grapth contains 195 nodes and 1158 edges.
 
-## c.Graphs
+## c. Graphs
 
 ## Feel the data
 
@@ -205,7 +205,7 @@ graph_football
 ![Caption for the football graph.](/images/feel_the_graph.JPG)
 
 
-#plot
+## Plot
 
 This chunk consists the plot of the graph
 
