@@ -132,7 +132,7 @@ which.max(GrivNewm$modularity)
 ![Caption for the Girvan-Newman community detection algorithm modularity.](/images/community1_girvan-newman_modularity.JPG)
 
 ### Second algorithm: Walktrap
-#### Community 2 - walktrap community detection
+#### i. Community 2 - walktrap community detection
 
 This chunk consists the creation of the second community detection algorithm
 
@@ -146,7 +146,7 @@ plot(graph_connections, vertex.size=5,vertex.color=comWT, asp=FALSE)
 
 ![Caption for the walktrap community detection algorithm.](/images/community2_walktrap.JPG)
 
-#### Community 2 - Number of communities
+#### ii. Community 2 - Number of communities
 
 This chunk consists the number of communities and their size
 
@@ -160,7 +160,7 @@ table(comWT)
 
 ![Caption for the walktrap community detection algorithm.](/images/community2_walktrap_size.JPG)
 
-#### Community 2 - Modularity
+#### iii. Community 2 - Modularity
 
 This chunk consists the Modularity rate
 
