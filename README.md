@@ -104,7 +104,9 @@ This chunk consists the number of communities and their size
 ```{r}
 table(comGN)
 ```
+
 > Number of communities detected is 7, size of each community:
+
 
 ![Caption for the Girvan-Newman community detection algorithm size of each community.](/images/community1_girvan-newman_size.JPG)
 
@@ -117,7 +119,9 @@ GrivNewm$modularity
 max(GrivNewm$modularity)
 which.max(GrivNewm$modularity)
 ```
+
 > The highest modularity value achieved is:
+
 
 ![Caption for the Girvan-Newman community detection algorithm modularity.](/images/community1_girvan-newman_modularity.JPG)
 
@@ -132,6 +136,8 @@ walktrap <- walktrap.community(graph_connections)
 comWT <- membership(walktrap)
 plot(graph_connections, vertex.size=5,vertex.color=comWT, asp=FALSE)
 ```
+
+
 ![Caption for the walktrap community detection algorithm.](/images/community1_walktrap.JPG)
 
 #### Community 2 - Number of communities
@@ -141,7 +147,10 @@ This chunk consists the number of communities and their size
 ```{r}
 table(comWT)
 ```
+
+
 > Number of communities detected is 7, size of each community:
+
 
 ![Caption for the walktrap community detection algorithm.](/images/community1_walktrap_size.JPG)
 
@@ -155,6 +164,7 @@ max(walktrap$modularity)
 which.max(walktrap$modularity)
 ```
 > The highest modularity value achieved is:
+
 
 ![Caption for the Girvan-Newman community detection algorithm modularity.](/images/community1_walktrap_modularity.JPG)
 
