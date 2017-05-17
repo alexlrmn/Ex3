@@ -19,14 +19,14 @@ connections.data <- read.csv('ga_edgelist.csv', header = T)
 graph_connections <- graph.data.frame(connections.data,directed = F)
 graph_connections
 ```
-![Caption for the graph_connections.](/iamges/graph_connections.jpg)
+![Caption for the graph_connections.](/images/graph_connections.jpg)
 
 ```r
 #First look at the grapth
 plot(graph_connections)
 ```
 
-![Caption for the grapth_plot.](/iamges/graph_plot.jpg)
+![Caption for the grapth_plot.](/images/graph_plot.jpg)
 
 
 ## Read the data
