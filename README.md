@@ -1,3 +1,5 @@
+# EX3 - Data collection & Network Analysis
+
 ---
 title: "310657051_201543915"
 author: "Alex&Liad"
@@ -5,34 +7,27 @@ date: "May 5, 2017"
 output: rmarkdown::github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Question 1
 
-## Installation of packages
-
-This chunk consists the installation of all the relevant packages
-
+## Package and code used:
 ```{r}
 install.packages('igraph')
-```
-
-## Importing Libraries
-
-This chunk consists the import of the relevant libraries
-
-```{r}
 library(igraph)
+
+#Loading the data
+connections.data <- read.csv('ga_edgelist.csv', header = T)
+graph_connections <- graph.data.frame(connections.data,directed = F)
+graph_connections
+```
+![Caption for the graph_connections.](/iamges/graph_connections.jpg)
+
+```r
+#First look at the grapth
+plot(graph_connections)
 ```
 
-## Set Working Directory
+![Caption for the grapth_plot.](/iamges/graph_plot.jpg)
 
-This chunk consists the definition of the working directory
-
-```{r}
-knitr::opts_knit$set(root.dir = 'C:/Users/Liad/Desktop/NetworkAnalysis')
-getwd()
-```
 
 ## Read the data
 
