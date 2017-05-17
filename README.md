@@ -46,6 +46,8 @@ ind_max_bet
 ```
 
 > Sloan is the actor with the highest betweeness (115.3667)
+
+
 ![Caption for the highest betweeness.](/images/sloan_betweeness.JPG)
 
 
@@ -63,6 +65,8 @@ ind_max_close
 ```
 
 > Torres is the actor with the highest Closeness (0.003194888)
+
+
 ![Caption for the highest closeness.](/images/torres_closeness.JPG)
 
 ### iii. Eigencetor
@@ -79,6 +83,8 @@ ind_max_eigen
 ```
 
 > Karev is the actor with the highest eigencetor
+
+
 ![Caption for the highest eigencetor.](/images/karev_eigencetor.JPG)
 
 ## b.
@@ -138,7 +144,7 @@ plot(graph_connections, vertex.size=5,vertex.color=comWT, asp=FALSE)
 ```
 
 
-![Caption for the walktrap community detection algorithm.](/images/community1_walktrap.JPG)
+![Caption for the walktrap community detection algorithm.](/images/community2_walktrap.JPG)
 
 #### Community 2 - Number of communities
 
@@ -152,7 +158,7 @@ table(comWT)
 > Number of communities detected is 7, size of each community:
 
 
-![Caption for the walktrap community detection algorithm.](/images/community1_walktrap_size.JPG)
+![Caption for the walktrap community detection algorithm.](/images/community2_walktrap_size.JPG)
 
 #### Community 2 - Modularity
 
@@ -166,7 +172,7 @@ which.max(walktrap$modularity)
 > The highest modularity value achieved is:
 
 
-![Caption for the Girvan-Newman community detection algorithm modularity.](/images/community1_walktrap_modularity.JPG)
+![Caption for the Girvan-Newman community detection algorithm modularity.](/images/community2_walktrap_modularity.JPG)
 
 
 # Question 2
