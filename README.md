@@ -216,10 +216,18 @@ plot(graph_football)
 ![Caption for the football graph.](/images/football_layout.JPG)
 
 Another look at the graph, each nodes size depends on the out degree(number of games won):
+```r
+V(graph_football1)$size=degree(graph_football1, mode="out")
+plot(graph_football)
+```
 
 ![Caption for the football graph, size.](/images/football_layout_clear.JPG)
 
 Just labels:
+
+```r
+tkplot(graph_football,vertex.size=0, edge.arrow.size=0.3)
+```
 
 ![Caption for the football graph labels.](/images/football_layout_labels.JPG)
 
