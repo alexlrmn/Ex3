@@ -1,11 +1,11 @@
-# EX3 - Data collection & Network Analysis
-
 ---
 title: "310657051_201543915"
 author: "Alex&Liad"
 date: "May 5, 2017"
 output: rmarkdown::github_document
 ---
+
+# EX3 - Data collection & Network Analysis
 
 # Question 1
 
@@ -29,31 +29,7 @@ plot(graph_connections)
 ![Caption for the grapth_plot.](/images/graph_plot.JPG)
 
 
-## Read the data
 
-This chunk consists the read of the data
-
-```{r}
-connections.data <- read.csv('ga_edgelist.csv', header = T)
-graph_connections <- graph.data.frame(connections.data,directed = F)
-
-```
-
-## Feel the data
-
-This chunk consists the graph data
-
-```{r}
-graph_connections
-```
-
-#plot
-
-This chunk consists the plot of the graph
-
-```{r}
-plot(graph_connections)
-```
 
 ## Betweeness 
 
